@@ -1,43 +1,54 @@
+/* ======================================
+   CONFIGURACIÓN GENERAL DEL DOCUMENTO
+   ====================================== */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: Raleway;
-  background: linear-gradient(#343434, #121218);
+  font-family: Raleway; /* Fuente principal */
+  background: linear-gradient(#343434, #121218); /* Fondo con degradado oscuro */
 }
 
+/* ======================================
+   ENCABEZADO DE LA GALERÍA
+   ====================================== */
 .heading {
   text-align: center;
   font-size: 2.0em;
   letter-spacing: 1px;
-  padding: 20px; 
+  padding: 20px;
   color: white;
   background-color: #444444;
   width: 90%;
-  margin: 0 auto; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
   border-radius: 5px;
 }
 
-
-
+/* ======================================
+   CONTENEDOR DE IMÁGENES DE LA GALERÍA
+   ====================================== */
 .gallery-image {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que las imágenes bajen de línea */
   justify-content: center;
 }
 
+/* Estilo base de las imágenes */
 .gallery-image img {
   height: 250px;
   width: 350px;
   transform: scale(1.0);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; /* Suaviza el efecto al hacer hover */
 }
 
+/* ======================================
+   CONTENEDOR INDIVIDUAL DE CADA IMAGEN
+   ====================================== */
 .img-box {
   box-sizing: content-box;
   margin: 15px;
@@ -45,85 +56,96 @@ body {
   width: 350px;
   overflow: hidden;
   display: inline-block;
-  color: rgb(255, 255, 255);
+  color: white;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
+/* ======================================
+   CAPTION (TEXTO SOBRE LA IMAGEN)
+   ====================================== */
 .caption {
   position: absolute;
   bottom: 5px;
   left: 20px;
-  opacity: 0.0;
+  opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Capa transparente para el efecto al pasar el mouse */
 .transparent-box {
   height: 250px;
   width: 350px;
-  background-color:rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
   position: absolute;
   top: 0;
   left: 0;
   transition: background-color 0.3s ease;
 }
 
-.img-box:hover img { 
-  transform: scale(1.1);
+/* ======================================
+   EFECTOS AL PASAR EL MOUSE
+   ====================================== */
+.img-box:hover img {
+  transform: scale(1.1); /* Hace zoom en la imagen */
 }
 
 .img-box:hover .transparent-box {
-  background-color:rgba(80, 80, 80, 0.5);
+  background-color: rgba(80, 80, 80, 0.5); /* Aparece una sombra oscura encima */
 }
 
 .img-box:hover .caption {
-  transform: translateY(-20px);
-  opacity: 1.0;
+  transform: translateY(-20px); /* Mueve el texto hacia arriba */
+  opacity: 1.0; /* Hace visible el texto */
 }
 
 .img-box:hover {
   cursor: pointer;
 }
 
+/* Estilo específico para el segundo párrafo dentro de caption */
 .caption > p:nth-child(2) {
   font-size: 0.8em;
 }
 
+/* Clase de baja opacidad opcional */
 .opacity-low {
   opacity: 0.5;
 }
 
-
+/* ======================================
+   BOTÓN FLOTANTE CIRCULAR
+   ====================================== */
 .btn-circle {
   text-decoration: none;
-  position: fixed;               
-  right: 100px;                   
-  bottom: 15%;                        
-  width: 200px;                   
-  height: 60px;                  
-  background: linear-gradient(#4471cb, #00234e);  
-  color: rgb(219, 219, 219);                  
-  text-align: center;            
-  line-height: 60px;             
-  border-radius: 10%;              
-  font-size: 18px;                 
-  box-shadow: 0 4px 50px rgb(0, 0, 0);
-  transition: background-color 1s, transform 0.5s; 
+  position: fixed;
+  right: 100px;
+  bottom: 15%;
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(#4471cb, #00234e); /* Degradado azul */
+  color: rgb(219, 219, 219);
+  text-align: center;
+  line-height: 60px;
+  border-radius: 10%;
+  font-size: 18px;
+  box-shadow: 0 4px 50px black;
+  transition: background-color 1s, transform 0.5s;
 }
 
 .btn-circle:hover {
-  background: linear-gradient(#4471cb, #00234e);        
-  transform: scale(1.1);             
+  background: linear-gradient(#4471cb, #00234e); /* Reafirma el fondo al hacer hover */
+  transform: scale(1.1); /* Aumenta el tamaño del botón */
 }
 
-
+/* ======================================
+   PIE DE PÁGINA
+   ====================================== */
 .copyright {
-    text-align: center;
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-    background-color: #2b2c31;
-    padding: 17px;
-    width: 100%; 
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  background-color: #2b2c31;
+  padding: 17px;
+  width: 100%;
 }
-
-
