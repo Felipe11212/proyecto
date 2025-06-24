@@ -57,7 +57,7 @@ Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->n
 Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register.post');
 
 
-
+// ruta del invenatrio
 use App\Http\Controllers\ProductoController;
 
 Route::get('/inventario', [ProductoController::class, 'index'])->name('inventario.index');
@@ -67,9 +67,10 @@ Route::put('/inventario/{id}', [ProductoController::class, 'update'])->name('inv
 Route::delete('/inventario/{id}', [ProductoController::class, 'destroy'])->name('inventario.destroy');
 
 
-use App\Http\Controllers\CarritoController;
 
 // Rutas del carrito
+use App\Http\Controllers\CarritoController;
+
 Route::post('/carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
 Route::get('/carrito', [CarritoController::class, 'ver'])->name('carrito.ver');
 Route::post('/carrito/confirmar', [CarritoController::class, 'confirmar'])->name('carrito.confirmar');
@@ -77,19 +78,13 @@ Route::post('/carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carr
 Route::post('/carrito/actualizar', [CarritoController::class, 'actualizar'])->name('carrito.actualizar');
 Route::delete('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
 
+
+
+// ruta de los reportes
 use App\Http\Controllers\ReporteController;
 
 Route::get('/reportes', [ReporteController::class,'index'])->name('reportes.index');
 Route::get('/reportes/pdf', [ReporteController::class,'exportPdf'])->name('reportes.pdf');
 Route::get('/reportes/excel', [ReporteController::class,'exportExcel'])->name('reportes.excel');
 
-Route::get('/admin', function () {
-    return view('admin'); 
-})->name('admin');
 
-
-use App\Http\Controllers\AdminCodeController;
-
-Route::get('/admin', [AdminCodeController::class, 'mostrarFormulario'])->name('admin.formulario');
-Route::post('/admin', [AdminCodeController::class, 'verificarCodigo'])->name('admin.verificar');
-Route::get('/dashboard', [AdminCodeController::class, 'dashboard'])->name('admin.dashboard');
