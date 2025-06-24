@@ -1,23 +1,27 @@
-
-
- h1 {
+/* Colorea todos los encabezados h1 en blanco */
+h1 {
     color: white;
- }
+}
 
- label {
+/* Colorea las etiquetas label en blanco */
+label {
     color: white;
- }
+}
 
-
- body {
+/* Establece una imagen de fondo en el body con propiedades para cubrir toda la pantalla */
+body {
     background-image: url('u1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
- }
+}
 
- /* Botón principal */
- .btn3 {
+/* ========================================
+   BOTONES PERSONALIZADOS
+   ======================================== */
+
+/* Botón verde brillante (acción principal) */
+.btn3 {
     display: inline-block;
     background-color: rgba(0, 241, 57, 0.98);
     color: #fff;
@@ -28,65 +32,73 @@
     font-size: 1rem;
     text-decoration: none;
     transition: 2s;
- }
+}
 
- .btn3:hover {
+/* Efecto hover: fondo blanco y texto verde */
+.btn3:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(88, 255, 4);
- }
+}
 
-
- /* Botón negro */
- .btn1 {
+/* Botón negro */
+.btn1 {
     background-color: black;
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
-  .btn1:hover {
+/* Hover: cambia a blanco con texto negro */
+.btn1:hover {
     background-color: aliceblue;
     color: black;
- }
+}
 
- /* Botón verde */
- .btn2 {
+/* Botón verde oscuro */
+.btn2 {
     background-color: rgb(59, 154, 0);
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
- .btn2:hover {
+/* Hover: blanco con texto verde */
+.btn2:hover {
     background-color: aliceblue;
     color: rgb(45, 136, 0);
- }
+}
 
- /* Botón rojo */
- .btn4 {
+/* Botón rojo */
+.btn4 {
     background-color: rgb(255, 0, 0);
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
- .btn4:hover {
+/* Hover: blanco con texto rojo */
+.btn4:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(255, 4, 4);
- }
+}
 
- .lista {
+/* Texto de listas en blanco */
+.lista {
     color: white;
- }
+}
 
- /* Encabezado */
- .encabezado {
+/* ========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ======================================== */
+
+/* Estilo del encabezado */
+.encabezado {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px 20px;
@@ -94,30 +106,37 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
- }
+}
 
- .logo {
+/* Contenedor del logo */
+.logo {
     display: flex;
     align-items: center;
- }
+    justify-content: space-between;
+    padding: 10px;
+}
 
- .logo-img {
+/* Imagen del logo */
+.logo-img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
- }
+}
 
- .nombre-empresa {
+/* Nombre de la empresa */
+.nombre-empresa {
     font-size: 1.8rem;
     font-weight: bold;
- }
+}
 
- .navegacion {
+/* Navegación con separación entre botones */
+.navegacion {
     display: flex;
     gap: 15px;
- }
+}
 
- .boton-nav {
+/* Botones de navegación */
+.boton-nav {
     text-decoration: none;
     color: white;
     background-color: rgba(0, 241, 57, 0.8);
@@ -125,45 +144,48 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: bold;
- }
+}
 
- .boton-nav:hover {
+/* Hover: cambia fondo y color de texto */
+.boton-nav:hover {
     background-color: white;
     color: rgb(4, 79, 21);
- }
+}
 
- .buscador {
+/* ========================================
+   BUSCADOR
+   ======================================== */
+
+/* Contenedor centrado */
+.buscador {
     margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
- }
+}
 
- .buscador input {
+/* Estilo del input de búsqueda */
+.buscador input {
     padding: 8px;
     width: 300px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
- }
- .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
- }
+}
 
-
-
- .espacios{
-
- background-color: rgba(255, 255, 255, 0.7);
- width: 150px;
+/* Campo con fondo semitransparente */
+.espacios {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 150px;
     height: 20px;
+}
 
- }
+/* ========================================
+   BOTONES DE MENÚ Y DROPDOWN
+   ======================================== */
 
- .btn7 {
+/* Botón del menú desplegable */
+.btn7 {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
@@ -174,65 +196,74 @@
     font-size: 1rem;
     text-decoration: none;
     transition: 1s;
-    top: auto;
- }
+}
 
- .btn7:hover {
+/* Hover: blanco con texto negro */
+.btn7:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
- }
+}
 
- .menu {
-            position: relative;
-            display: inline-block;
-        }
+/* Menú principal */
+.menu {
+    position: relative;
+    display: inline-block;
+}
 
-        .menu-button {
-            background-color:rgba(52, 152, 219, 0);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
+/* Botón del menú */
+.menu-button {
+    background-color: rgba(52, 152, 219, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
 
-        .dropdown {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 5px;
-        }
+/* Menú desplegable oculto */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
 
-        .dropdown a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-bottom: 1px solid #ddd;
-        }
+/* Links dentro del dropdown */
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
 
-        .dropdown a:hover {
-            background-color: #ddd;
-        }
+/* Hover en opciones del menú */
+.dropdown a:hover {
+    background-color: #ddd;
+}
 
-        .menu:hover .dropdown {
-            display: block;
-        }
+/* Mostrar el menú al pasar el mouse */
+.menu:hover .dropdown {
+    display: block;
+}
 
-        /* Opcional: cerrar borde al final */
-        .dropdown a:last-child {
-            border-bottom: none;
-        }
-        .aqui{
-        background-color: gray;
-        color: white;
-        }
-        
-        .fondot{
-            background-Color: rgba(255, 255, 255, 0.778);
-            border-radius: 30px;
-        }
+/* Elimina el borde del último ítem del dropdown */
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Opción activa del menú */
+.aqui {
+    background-color: gray;
+    color: white;
+}
+
+/* Contenedor blanco semitransparente con bordes redondeados */
+.fondot {
+    background-color: rgba(255, 255, 255, 0.778);
+    border-radius: 30px;
+}
