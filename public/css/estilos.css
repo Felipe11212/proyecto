@@ -1,30 +1,39 @@
-   
-    /* estilos.css */
+/* ============================
+   TÍTULOS Y TEXTOS GENERALES
+   ============================ */
 
- h1 {
-    color: rgb(255, 249, 249);
- }
-
- label {
-    color: white;
- }
-strong{
-   color: #f1f1f1;
-   background-color: rgba(0, 0, 0, 0.753);
-   border-radius: 10PX;
+/* Color del título h1 */
+h1 {
+    color: rgb(255, 249, 249); /* Blanco ligeramente rosado */
 }
 
- body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
+/* Color de etiquetas label */
+label {
+    color: white;
+}
 
- }
+/* Estilo para etiquetas <strong> con fondo y bordes */
+strong {
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.753); /* Fondo oscuro semitransparente */
+    border-radius: 10px;
+}
 
- /* Botón principal */
- .btn3 {
+/* Reset del body */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ============================
+   BOTONES ESTÁNDAR
+   ============================ */
+
+/* Botón verde .btn3 */
+.btn3 {
     display: inline-block;
-    background-color: rgba(0, 241, 57, 0.98);
+    background-color: rgba(0, 241, 57, 0.98); /* Verde brillante */
     color: #fff;
     padding: .5rem 1rem;
     border: none;
@@ -33,96 +42,92 @@ strong{
     font-size: 1rem;
     text-decoration: none;
     transition: 2s;
- }
+}
 
- .btn3:hover {
-    background-color: rgb(255, 255, 255);
+.btn3:hover {
+    background-color: white;
     color: rgb(88, 255, 4);
- }
+}
 
-
- /* Botón negro */
- .btn1 {
+/* Botón negro .btn1 */
+.btn1 {
     background-color: black;
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
- .btn1:hover {
+.btn1:hover {
     background-color: aliceblue;
     color: black;
- }
+}
 
- /* Botón verde */
- .btn2 {
+/* Botón verde oscuro .btn2 */
+.btn2 {
     background-color: rgb(59, 154, 0);
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
- .btn2:hover {
+.btn2:hover {
     background-color: aliceblue;
     color: rgb(45, 136, 0);
- }
+}
 
- /* Botón rojo */
- .btn4 {
-    background-color: rgb(255, 0, 0);
+/* Botón rojo .btn4 */
+.btn4 {
+    background-color: red;
     text-decoration: none;
     color: aliceblue;
     border-radius: 5px;
     padding: 5px;
     transition: 2s;
- }
+}
 
- .btn4:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 4, 4);
- }
+.btn4:hover {
+    background-color: white;
+    color: red;
+}
 
- .lista {
-    color: white;
- }
+/* ============================
+   ENCABEZADO Y NAVEGACIÓN
+   ============================ */
 
- /* Encabezado */
- .encabezado {
-    background-color: rgba(0, 0, 0, 0.7);
+.encabezado {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
     color: white;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
- }
+}
 
- .logo {
+.logo {
     display: flex;
     align-items: center;
- }
+    justify-content: space-between;
+    padding: 10px;
+}
 
- .logo-img {
+.logo-img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
- }
+}
 
- .nombre-empresa {
+.nombre-empresa {
     font-size: 1.8rem;
     font-weight: bold;
- }
+}
 
- .navegacion {
-    display: flex;
-    gap: 15px;
- }
-
- .boton-nav {
+/* Botón de navegación personalizado */
+.boton-nav {
     text-decoration: none;
     color: white;
     background-color: rgba(0, 241, 57, 0.8);
@@ -130,47 +135,108 @@ strong{
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: bold;
- }
+}
 
- .boton-nav:hover {
+.boton-nav:hover {
     background-color: white;
     color: rgb(4, 79, 21);
- }
+}
 
- .buscador {
+/* ============================
+   BARRA DE BÚSQUEDA
+   ============================ */
+.buscador {
     margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
- }
+}
 
- .buscador input {
+.buscador input {
     padding: 8px;
     width: 300px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
- }
- .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
- }
+}
 
+/* ============================
+   MENÚ DESPLEGABLE
+   ============================ */
 
-
- .espacios{
-
- background-color: rgba(255, 255, 255, 0.7);
- width: 150px;
-    height: 20px;
-
- }
-
- .btn7 {
+.menu {
+    position: relative;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Clase que indica el enlace actual */
+.aqui {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* ============================
+   ESTILO DE PÁGINA
+   ============================ */
+
+.lista {
+    color: white;
+    background-color: rgba(255, 0, 0, 0.574); /* Rojo translúcido */
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.espacios {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 150px;
+    height: 20px;
+}
+
+.btn7 {
+    display: inline-block;
+    background-color: transparent;
     color: #fff;
     padding: .7rem 2rem;
     border: none;
@@ -179,84 +245,32 @@ strong{
     font-size: 1rem;
     text-decoration: none;
     transition: 2s;
-    top: auto;
- }
-
- .btn7:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    }
-    
- .menu {
-            position: relative;
-            display: inline-block;
-        }
-
-        .menu-button {
-            background-color:rgba(52, 152, 219, 0);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 5px;
-        }
-
-        .dropdown a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .dropdown a:hover {
-            background-color: #ddd;
-        }
-
-        .menu:hover .dropdown {
-            display: block;
-        }
-
-        /* Opcional: cerrar borde al final */
-        .dropdown a:last-child {
-            border-bottom: none;
-        }
-        .aqui{
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-        }
-         .lista {
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 0, 0, 0.574);
-     margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
- }
-.contenedor{
- margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-     background-color: #ffffff00;
-     color: rgb(0, 255, 255);
 }
+
+.btn7:hover {
+    background-color: white;
+    color: black;
+}
+
+.contenedor {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: cyan;
+}
+
+/* ============================
+   TABLAS DE INVENTARIO Y REPORTES
+   ============================ */
+
+/* Tabla de productos (inventario) */
 .tabla-productos {
     width: 90%;
     color: #ddd;
     border-collapse: collapse;
-    background-color: #ffffff00;
+    background-color: transparent;
     box-shadow: 0 0 10px rgb(255, 248, 248);
     border-radius: 10px;
     overflow: hidden;
@@ -278,23 +292,20 @@ strong{
 
 .tabla-productos tbody tr:hover {
     background-color: #f5f5f595;
-    color: blackd;
+    color: black;
 }
 
-
-
-
-.tabla-reporte{
+/* Tabla de reportes */
+.tabla-reporte {
     width: 55%;
     color: #ddd;
     border-collapse: collapse;
-    background-color: #ffffff00;
-    box-shadow: 0 0 40px rgb(0, 0, 0);
+    background-color: transparent;
+    box-shadow: 0 0 40px black;
     border-radius: 100px;
     overflow: hidden;
     margin-bottom: 60px;
     font-family: 'Segoe UI', sans-serif;
-    
 }
 
 .tabla-reporte thead {
@@ -311,6 +322,6 @@ strong{
 
 .tabla-reporte tbody tr:hover {
     background-color: #f5f5f595;
-    color: blackd;
+    color: black;
 }
 
