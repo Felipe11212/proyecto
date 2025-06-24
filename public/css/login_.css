@@ -1,4 +1,5 @@
-*{
+/* Reset general de márgenes, padding y fuentes */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+/* Fondo del cuerpo con imagen centrada y ajustada a la pantalla */
+body {
     background-image: url(img6.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,54 +16,59 @@ body{
     background-attachment: fixed;
 }
 
-main{
+/* Contenedor principal del contenido */
+main {
     width: 100%;
     padding: 20px;
     margin: auto;
     margin-top: 100px;
 }
 
-.contenedor__todo{
+/* Contenedor general del formulario */
+.contenedor__todo {
     width: 100%;
     max-width: 800px;
     margin: auto;
     position: relative;
 }
 
-.caja__trasera{
+/* Caja trasera que contiene los botones de login y register */
+.caja__trasera {
     width: 100%;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 255, 0.5);
-
+    background-color: rgba(0, 128, 255, 0.5); /* Azul con transparencia */
 }
 
-.caja__trasera div{
+/* Elementos dentro de la caja trasera */
+.caja__trasera div {
     margin: 100px 40px;
     color: white;
     transition: all 500ms;
 }
 
-
+/* Espaciado de párrafos y botones dentro de la caja */
 .caja__trasera div p,
-.caja__trasera button{
+.caja__trasera button {
     margin-top: 30px;
 }
 
-.caja__trasera div h3{
+/* Estilo del título */
+.caja__trasera div h3 {
     font-weight: 400;
     font-size: 26px;
 }
 
-.caja__trasera div p{
+/* Estilo del texto descriptivo */
+.caja__trasera div p {
     font-size: 16px;
     font-weight: 300;
 }
 
-.caja__trasera button{
+/* Botones de la caja trasera */
+.caja__trasera button {
     padding: 10px 40px;
     border: 2px solid #fff;
     font-size: 14px;
@@ -73,14 +80,18 @@ main{
     transition: all 300ms;
 }
 
-.caja__trasera button:hover{
+/* Hover en botón de caja trasera */
+.caja__trasera button:hover {
     background: #fff;
     color: #46A2FD;
 }
 
-/*Formularios*/
+/* ==========================================
+   FORMULARIOS LOGIN / REGISTER
+   ========================================== */
 
-.contenedor__login-register{
+/* Contenedor de los formularios */
+.contenedor__login-register {
     display: flex;
     align-items: center;
     width: 100%;
@@ -88,12 +99,11 @@ main{
     position: relative;
     top: -185px;
     left: 10px;
-
-    /*La transicion va despues del codigo JS*/
-    transition:  left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* Suaviza el movimiento del contenedor */
 }
 
-.contenedor__login-register form{
+/* Estilo general de los formularios */
+.contenedor__login-register form {
     width: 100%;
     padding: 80px 20px;
     background: white;
@@ -101,14 +111,16 @@ main{
     border-radius: 20px;
 }
 
-.contenedor__login-register form h2{
+/* Título del formulario */
+.contenedor__login-register form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
     color: #46A2FD;
 }
 
-.contenedor__login-register form input{
+/* Campos del formulario */
+.contenedor__login-register form input {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
@@ -118,7 +130,8 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form button{
+/* Botón del formulario */
+.contenedor__login-register form button {
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
@@ -130,70 +143,75 @@ main{
     outline: none;
 }
 
-
-
-
-.formulario__login{
+/* Formulario login visible por defecto */
+.formulario__login {
     opacity: 1;
     display: block;
 }
-.formulario__register{
+
+/* Formulario registro oculto inicialmente */
+.formulario__register {
     display: none;
 }
 
-
-
-@media screen and (max-width: 850px){
-
-    main{
+/* ==========================================
+   RESPONSIVE (DISPOSITIVOS PEQUEÑOS)
+   ========================================== */
+@media screen and (max-width: 850px) {
+    main {
         margin-top: 50px;
     }
 
-    .caja__trasera{
+    /* Caja trasera se adapta al tamaño pequeño */
+    .caja__trasera {
         max-width: 350px;
         height: 300px;
         flex-direction: column;
         margin: auto;
     }
 
-    .caja__trasera div{
+    .caja__trasera div {
         margin: 0px;
         position: absolute;
     }
 
-
-    /*Formularios*/
-
-    .contenedor__login-register{
+    /* Formularios adaptados a móvil */
+    .contenedor__login-register {
         top: -10px;
         left: -5px;
         margin: auto;
     }
 
-    .contenedor__login-register form{
+    .contenedor__login-register form {
         position: relative;
     }
-}   
-.volver{
-    border: 7px solid rgba(0, 0, 0, 0.148); 
-    text-decoration: none;
-    position: fixed;               
-    right: 100px;                   
-    bottom: 15%;                        
-    width: 200px;                   
-    height: 60px;                  
-    background:#46A2FD;  
-    color: rgb(0, 0, 0);                  
-    text-align: center;            
-    line-height: 60px;             
-    border-radius: 10%;              
-    font-size: 18px;                 
-    box-shadow: 0 10px 50px rgb(0, 0, 0);
-    transition: background-color 1s, transform 0.5s; 
 }
+
+/* ==========================================
+   BOTÓN DE VOLVER FLOTANTE
+   ========================================== */
+.volver {
+    border: 7px solid rgba(0, 0, 0, 0.148);
+    text-decoration: none;
+    position: fixed;
+    right: 100px;
+    bottom: 15%;
+    width: 200px;
+    height: 60px;
+    background: #46A2FD;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10%;
+    font-size: 18px;
+    box-shadow: 0 10px 50px rgb(0, 0, 0);
+    transition: background-color 1s, transform 0.5s;
+}
+
+/* Hover en botón volver */
 .volver:hover {
     color: #f0f0f0;
-    background: linear-gradient(#a4ffff, #9cb1e5);        
-    transform: scale(1.1);    
-    transition: 2s;         
-  }
+    background: linear-gradient(#a4ffff, #9cb1e5);
+    transform: scale(1.1);
+    transition: 2s;
+}
